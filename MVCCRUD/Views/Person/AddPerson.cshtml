@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "AddPerson";
+}
+@model MVCCRUD.Models.PersonModel
+
+
+<h2>Add Person</h2>
+
+<form action="AddPerson/Person" method="post">
+
+    Person Name: @Html.TextBoxFor(Model=>Model.PersonName)
+    Person Address: @Html.TextBoxFor(Model=>Model.PersonAddress)
+    @*<input type="text" name="PersonName" id="PErsonName" />*@
+    <input type="submit" value="Add Person"/>
+</form>

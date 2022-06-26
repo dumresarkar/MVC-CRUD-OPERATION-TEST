@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "EditPerson";
+}
+
+<h2>Edit Person</h2>
+@model Person
+<form action="EditPerson/Person" method="post">
+
+    Person Name: @Html.TextBoxFor(Model => Model.PersonName)
+    Person Address: @Html.TextBoxFor(Model => Model.PersonAddress)
+    @Html.HiddenFor(model=>model.PersonId)
+    @*<input type="text" name="PersonName" id="PErsonName" />*@
+    <input type="submit" value="Update Person" />
+    </form>
+

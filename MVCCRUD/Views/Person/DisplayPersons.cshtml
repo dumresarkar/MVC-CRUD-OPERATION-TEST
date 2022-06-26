@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "DisplayPersons";
+}
+@model List<Person>
+
+<h2>Display Person</h2>
+<table border="1">
+    <tr>
+        <th>PersonId</th>
+        <th>Person Name</th>
+        <th>Person Address</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PersonId</td>
+            <td>@item.PersonName</td>
+            <td>@item.PersonAddress</td>
+            <td>@Html.ActionLink("Edit","EditPerson","Person",new {Personid = item.PersonId }, new {})</td>
+            <td>@Html.ActionLink("Delete","DeletePerson","Person",new {Personid = item.PersonId }, new {})</td>
+
+        </tr>
+
+    }
+</table>
+
